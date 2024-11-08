@@ -7,7 +7,7 @@ class Hero{
     private:
     int health;
 
-    
+    public:
     char level;
 
     int getHealth(){
@@ -35,20 +35,20 @@ class Hero{
 //     return 0;
 // }
 
-// int  main(){
+int  main(){
 
-//     Hero Ramesh;
-//     Ramesh.setHealth(70);
-//     Ramesh.level='A';
+    Hero Ramesh;
+    Ramesh.setHealth(70);
+    Ramesh.setlevel='A';
 
-//     cout<<"Health: "<<Ramesh.getHealth()<<endl;
-//     cout<<"Level: "<<Ramesh.level<<endl;
-//     return 0;
-// }
+    cout<<"Health: "<<Ramesh.getHealth()<<endl;
+    cout<<"Level: "<<Ramesh.getlevel<<endl;
+    return 0;
+}
 
 //statically and dynamically allocated
-int main(){
-    Hero h1;
-    Hero *b=new Hero();
+// int main(){
+//     Hero h1;
+//     Hero *b=new Hero();
     
-}
+// }
