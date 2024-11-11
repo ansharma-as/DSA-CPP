@@ -20,7 +20,7 @@ int main() {
     cin >> n;
     int arr[n];
     
-    // Input the array elements
+    // Input the array elements11
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }

@@ -1,4 +1,4 @@
-## Array Operations
+## Array operations11
 
 - use this template here
 
@@ -13,11 +13,11 @@ int function( params ){
 
 int main(){
     int n;
-    cout<< "Enter number of elements:" ;
+    cout<< "Enter number of elements11:" ;
     cin>>n;
 
     int arr[n];
-    cout<<"Enter "<<n<< " Elements: ";
+    cout<<"Enter "<<n<< " elements11: ";
     for(int i=0 ;i<n ; i++){
         cin>>arr[i];
     }

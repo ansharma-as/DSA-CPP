@@ -14,14 +14,14 @@ int main() {
     int n, x;
 
     // Input the size of the array
-    cout << "Enter the number of elements: ";
+    cout << "Enter the number of elements11: ";
     cin >> n;
 
     // Declare the array after knowing the value of n
     int arr[n];
 
-    // Input the array elements
-    cout << "Enter " << n << " elements: ";
+    // Input the array elements11
+    cout << "Enter " << n << " elements11: ";
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }

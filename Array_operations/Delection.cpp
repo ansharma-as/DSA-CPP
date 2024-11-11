@@ -18,11 +18,11 @@ int Delete(int arr[] , int n, int x){
 
 int main(){
     int n;
-    cout<< "Enter number of elements:" ;
+    cout<< "Enter number of elements11:" ;
     cin>>n;
 
     int arr[n];
-    cout<<"Enter "<<n<< " Elements: ";
+    cout<<"Enter "<<n<< " elements11: ";
     for(int i=0 ;i<n ; i++){
         cin>>arr[i];
     }

@@ -16,11 +16,11 @@ int Largest( vector<int> &arr  ){
 
 int main(){
      int n;
-     cout<< "Enter number of elements:" ;
+     cout<< "Enter number of elements11:" ;
      cin>>n;
 
     vector<int> arr(n);
-    cout<<"Enter "<<n<< " Elements: ";
+    cout<<"Enter "<<n<< " elements11: ";
     for(int i=0 ;i<n ; i++){
         cin>>arr[i];
     }
