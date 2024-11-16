@@ -13,22 +13,14 @@ int function( params ){
 
 int main(){
     int n;
-    cout<< "Enter number of elements11:" ;
+    cout<< "Enter number of elements:" ;
     cin>>n;
 
     int arr[n];
-    cout<<"Enter "<<n<< " elements11: ";
+    cout<<"Enter "<<n<< " elements: ";
     for(int i=0 ;i<n ; i++){
         cin>>arr[i];
     }
-
-    int x;
-    cout<<"Enter the Element to do Operation with: ";
-    cin>>x;
-
-    // int pos;
-    // cout<<"Enter the position to insert: ";
-    // cin>>pos;
     
     int res=function(params );
 

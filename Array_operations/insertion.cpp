@@ -2,43 +2,50 @@
 #include <vector>
 using namespace std;
 
-int Largest( vector<int> &arr  ){
-    
-    int largest= arr[0];
-    for(int i=0 ; i<arr.size() ; i++){
-        if(arr[i] > largest){
-            largest= arr[i];
-        }
-    }
-    return largest;
 
-};
+
+int Insert(int arr[], int n , int x, int pos, int cap){
+    if(n== cap){
+        return n;
+    }
+
+    int index=pos-1;
+    for(int i=n-1 ; i>=index ; i--){
+        arr[i+1]=arr[i];
+    }
+    
+    arr[index]=x;
+    return n+1;
+}
 
 int main(){
-     int n;
-     cout<< "Enter number of elements11:" ;
-     cin>>n;
+      int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
 
-    vector<int> arr(n);
-    cout<<"Enter "<<n<< " elements11: ";
-    for(int i=0 ;i<n ; i++){
-        cin>>arr[i];
+    int cap;
+    cout<< "Enter capacity: ";
+    cin>>cap;
+    int arr[cap];
+    cout << "Enter " << n << " Elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
 
-    // int x;
-    // cout<<"Enter the Element to do Operation with: ";
-    // cin>>x;
+    int x;
+    cout << "Enter the Element to insert: ";
+    cin >> x;
 
-    // int pos;
-    // cout<<"Enter the position to insert: ";
-    // cin>>pos;
-    
-    int res=Largest(arr);
+    int pos;
+    cout << "Enter the position to insert: ";
+    cin >> pos;
 
-    cout<<"Updated Array: ";
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+    n = Insert(arr, n, x, pos, cap);
+
+    cout << "Updated Array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
-        cout << "The largest element is: " << res << endl;
+    cout << endl;
 
 }

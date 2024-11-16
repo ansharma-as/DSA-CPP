@@ -7,14 +7,14 @@ int Search(int arr[], int n, int x) {
             return i;  // Return the index where the element is found
         }
     }
-    return -1;  // Return -1 if the element is not found
+    return -1; // Return
 }
 
 int main() {
     int n, x;
 
     // Input the size of the array
-    cout << "Enter the number of elements11: ";
+    cout << "Enter the number of elements: ";
     cin >> n;
 
     // Declare the array after knowing the value of n
