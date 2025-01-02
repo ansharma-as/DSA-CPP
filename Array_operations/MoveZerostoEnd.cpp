@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-vector<int> MoveZeros(vector<int> arr , int n){
+void MoveZeros(vector<int> &arr , int n){
     int j= -1;
     for(int i=0 ;i<n ; i++){
         if( arr[i] == 0){
@@ -10,7 +10,7 @@ vector<int> MoveZeros(vector<int> arr , int n){
         }
     }
 
-    if(j==-1) return arr;
+    if(j==-1) return;
 
     for( int i=j+1 ; i<n ; i++){
         if(arr[i]!=0){
