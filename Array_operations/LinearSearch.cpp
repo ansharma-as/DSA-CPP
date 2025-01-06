@@ -30,5 +30,5 @@ int main() {
     cout << "Result is: "<< Search(arr, n , num) << endl;
     
 
-    return 0
+    return 0;
 }
