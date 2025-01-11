@@ -14,5 +14,5 @@ int main()  {
     cout<<"Enter a number: ";
     cin>>n;
     divisors(n);
-    return 0;
+    return 0
 }
