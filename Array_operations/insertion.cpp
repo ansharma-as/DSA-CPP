@@ -17,6 +17,18 @@ int Insert(int arr[], int n , int x, int pos, int cap){
     arr[index]=x;
     return n+1;
 }
+int Insertion(vector<int> &arr, int n , int x, int pos, int cap){
+    if(n==cap){
+        return n;
+    }
+    int index = pos-1;
+    for(int i=n-1 ; i>=index ; i--){
+        arr[i+1]=arr[i];
+    }
+    arr[index]=x;
+    return n+1;
+
+}
 
 int main(){
       int n;
@@ -26,7 +38,8 @@ int main(){
     int cap;
     cout<< "Enter capacity: ";
     cin>>cap;
-    int arr[cap];
+    vector<int> arr(n);
+    //int arr[cap];
     cout << "Enter " << n << " Elements: ";
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
@@ -40,7 +53,8 @@ int main(){
     cout << "Enter the position to insert: ";
     cin >> pos;
 
-    n = Insert(arr, n, x, pos, cap);
+    n = Insertion(arr, n, x, pos, cap);
+
 
     cout << "Updated Array: ";
     for (int i = 0; i < n; i++) {
