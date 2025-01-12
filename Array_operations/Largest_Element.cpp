@@ -2,6 +2,21 @@
 #include <vector>
 using namespace std;
 
+int Naive(vector<int> &arr, int n){
+    for(int i=0 ; i<n ; i++){
+        bool flag=true;
+        for(int j=0; j<n ; j++){
+            if(arr[j]>arr[i]){
+                flag=false;
+                break;
+            }
+        }
+        if(flag==true){
+            return i;
+        }
+    }
+    return -1;
+}
 int Largest( vector<int> &arr  ){
     
     int largest= arr[0];
@@ -25,13 +40,7 @@ int main(){
         cin>>arr[i];
     }
 
-    // int x;
-    // cout<<"Enter the Element to do Operation with: ";
-    // cin>>x;
-
-    // int pos;
-    // cout<<"Enter the position to insert: ";
-    // cin>>pos;
+    
     
     int res=Largest(arr);
 
