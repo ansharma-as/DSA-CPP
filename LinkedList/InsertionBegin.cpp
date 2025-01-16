@@ -18,22 +18,18 @@ void printList(Node* head){
     }
 }
 
-void reversePrint(Node* head){
-    if(head==NULL){
-        return;
-    }
-    reversePrint(head->next);
-    cout<<head->data<<" ";
+Node* insertBegin(Node* head , int x){
+    Node* temp= new Node(x);
+    temp -> next = head;
+    return temp;
 }
 
 int main(){
     Node *head = new Node(10);
-    head -> next = new Node(20);
-    head -> next -> next = new Node(30);
-    head -> next -> next -> next = new Node(40);
-
+    head = insertBegin(head, 5);
+    head = insertBegin(head, 20);
+    head = insertBegin(head, 30);
+    
     printList(head);
-    cout<<endl;
-    reversePrint(head);
     return 0;
 }
