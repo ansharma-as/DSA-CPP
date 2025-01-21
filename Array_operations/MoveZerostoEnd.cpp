@@ -33,6 +33,17 @@ void Naive(int arr[], int n){
     }
 }
 
+void Naive2(int arr[], int n){
+    for(int i=0 ; i<n ; i++){
+        for(int j=n-1 ; j>=i ; j--){
+            if(arr[j]==0){
+                swap(arr[i],arr[j]);
+            }
+        }
+    }
+}
+
+
 void optimal(int arr[],int n){
     int count=0;
     for(int i=0 ; i<n ; i++){
