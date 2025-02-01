@@ -1,33 +1,33 @@
 #include <iostream>
 using namespace std;
 
-void KthBith(int n , int k){
-    int x= (1<<(k-1));
-    if((n&x)!=0){
-        cout<<"yes"<<endl;
+int CountNaive(int n){
+    int res=0;
+    while(n>0){
+        if(n%2==1){
+            res++;
+        }
+        n=n/2;
     }
-    else{
-        cout<<"no"<<endl;
-    }
+    return res;
 }
 
-void KthBith2(int n , int k){
-    int x= (n>>(k-1));
-    if((x&1)==1){
-        cout<<"yes"<<endl;
+int countOptimal(int n){
+    int res=0;
+    while(n>0){
+        n= n& (n-1);
+        res=res+1;
     }
-    else{
-        cout<<"no"<<endl;
-    }
+    return res;
 }
 
 int main(){
 
     int n=5;
-    int k=3;
-    KthBith(n,k);
-    KthBith2(n,k);
-
+    cout<<CountNaive(n);
+    cout<<endl;
+    cout<<countOptimal(n);
+    cout<<endl;
 
     return 0;
 }
