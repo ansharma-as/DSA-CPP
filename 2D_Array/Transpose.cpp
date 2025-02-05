@@ -24,7 +24,7 @@ void Naive(int arr[n][n]) {
 // Optimal approach: Transpose the matrix in place.
 void optimal(int arr[n][n]) {
     for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
+        for (int j = i+1; j < n; j++) {
             swap(arr[i][j], arr[j][i]);
         }
     }
