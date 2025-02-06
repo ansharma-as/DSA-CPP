@@ -27,5 +27,6 @@ int main(){
                    {25, 35, 45, 55}};
     int x = 45;
     search(arr, x);
+    cout<<endl;
     return 0;
 }
