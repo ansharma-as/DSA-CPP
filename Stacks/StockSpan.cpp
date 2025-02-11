@@ -6,7 +6,8 @@ void StockSpanNaive(vector<int> &arr){
     int n=arr.size();
     for(int i=0 ; i <n; i++){
         int span=1;
-        for(int j=i-1; j>=0 && arr[j]<=arr[i]; j--){
+        for(int j=i-1; j>=0 ; j--){
+            if(arr[j]<=arr[i])
             span++;
 
         }
