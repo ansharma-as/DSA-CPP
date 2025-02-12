@@ -6,8 +6,8 @@ void StockSpanNaive(vector<int> &arr){
     int n=arr.size();
     for(int i=0 ; i <n; i++){
         int span=1;
-        for(int j=i-1; j>=0 ; j--){
-            if(arr[j]<=arr[i])
+        for(int j=i-1; j>=0 && arr[j]<=arr[i] ; j--){
+            //if(arr[j]>arr[i]) break;
             span++;
 
         }
@@ -37,10 +37,21 @@ void OptimalSpan(vector<int> &arr){
 
 }
 
-
+void practiceSpan(vector<int> arr){
+    stack<int> s;
+    s.push(arr[0]);
+    for(int i=0 ; i<arr.size()  ; i++){
+        while(!s.empty() && arr[s.top()]<=arr[i]){
+            s.pop();
+        }
+        int span = s.empty() ? i+1 : i-s.top();
+        cout<<span<<" ";
+        s.push(i);
+    }
+}
 
 int main(){
-    int n; 
+    int n;  
     cin>>n;
     
     vector<int> arr(n);
@@ -51,6 +62,8 @@ int main(){
     StockSpanNaive(arr);
     cout<<endl;
     OptimalSpan(arr);
+    cout<<endl;
+    practiceSpan(arr);
 
     cout<<endl;
     return 0;
